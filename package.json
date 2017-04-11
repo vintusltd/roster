@@ -1,0 +1,24 @@
+{
+  "name": "roster",
+  "version": "1.0.0",
+  "description": "D&D character sheets on your desktop",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dnd",
+    "dungeons",
+    "dragons",
+    "character",
+    "sheet"
+  ],
+  "author": "Elliot Blackburn",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "electron": "^1.6.2",
+    "milligram": "^1.3.0",
+    "normalize.css": "^6.0.0"
+  }
+}
