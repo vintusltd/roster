@@ -13,7 +13,6 @@ function createMainWindow() {
         title: app.getName(),
         minWidth: 800,
         minHeight: 500,
-        titleBarStyle: 'hidden-inset',
         autoHideMenuBar: true,
         webPreferences: {
             webSecurity: false
@@ -35,7 +34,6 @@ function createMainWindow() {
 
 app.on('ready', () => {
     electron.Menu.setApplicationMenu(appMenu);
-    console.log(electron.Menu.getApplicationMenu());
 
     mainWindow = createMainWindow();
 });
@@ -50,4 +48,6 @@ app.on('activate', () => {
     if (mainWindow === null) {
         mainWindow = createMainWindow();
     }
-})
+});
+
+ipcMain.on('save-component', require('./save'));

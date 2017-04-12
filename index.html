@@ -2,13 +2,100 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./assets/fonts/roboto/roboto.css"
+        <link rel="stylesheet" href="./assets/fonts/roboto/roboto.css">
         <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
         <link rel="stylesheet" href="./node_modules/milligram/dist/milligram.min.css">
+
+        <link rel="stylesheet" href="./assets/reset.css">
+        <link rel="stylesheet" href="./assets/character-sheet.css">
+
+        <!-- Fix for modules which support both browser and node -->
+        <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+            <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+            <script src="./assets/notify.min.js"></script>
+            <script src="./assets/notify-config.js"></script>
+        <script>if (window.module) module = window.module;</script>
+
+        <script src="./character-sheet/index.js"></script>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Character sheet</h1>
         
+        <div class="container">
+            <form id="overview-form">
+                <h2>Overview</h2>
+
+                <div class="row">
+                    <dl class="column form-group">
+                        <dt class="input-label">
+                            <label for="name">Character Name</label>
+                        </dt>
+                        <dd>
+                            <input class="form-control" name="name" type="text">
+                        </dd>
+                    </dl>
+
+                    <dl class="column form-group">
+                        <dt class="input-label">
+                            <label for="class">Class</label>
+                        </dt>
+                        <dd>
+                            <input class="form-control" name="class" type="text">
+                        </dd>
+                    </dl>
+
+                    <dl class="column form-group">
+                        <dt class="input-label">
+                            <label for="level">Level</label>
+                        </dt>
+                        <dd>
+                            <input class="form-control" name="level" type="number">
+                        </dd>
+                    </dl>
+
+                    <dl class="column form-group">
+                        <dt class="input-label">
+                            <label for="experience">Experience Points</label>
+                        </dt>
+                        <dd>
+                            <input class="form-control" name="experience" type="number">
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="row">
+                    <dl class="column form-group">
+                        <dt class="input-label">
+                            <label for="background">Background</label>
+                        </dt>
+                        <dd>
+                            <input class="form-control" name="background" type="text">
+                        </dd>
+                    </dl>
+                    
+                    <dl class="column form-group">
+                        <dt class="input-label">
+                            <label for="race">Race</label>
+                        </dt>
+                        <dd>
+                            <input class="form-control" name="race" type="text">
+                        </dd>
+                    </dl>
+
+                    <dl class="column form-group">
+                        <dt class="input-label">
+                            <label for="alignment">Alignment</label>
+                        </dt>
+                        <dd>
+                            <input class="form-control" name="alignment" type="text">
+                        </dd>
+                    </dl>
+                </div>
+
+                <button type="submit">Save</button>
+            </form>
+
+        </div>
         
     </body>
 </html>
